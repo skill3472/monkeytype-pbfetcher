@@ -1,12 +1,11 @@
 import requests
 import datetime
-from time import sleep
-import json
 import yaml
+import sys
 
 with open('config.yaml', 'r') as c:
     config = yaml.safe_load(c)
-key = open(config['api_key']).read()
+key = sys.argv[1]
 api = 'https://api.monkeytype.com'
 
 time = config['time']
