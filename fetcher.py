@@ -32,16 +32,14 @@ def changeLine(n, text):
         f.writelines(data)
 
 def updateFile():
-    while True:
-        now = datetime.datetime.now().strftime(time)
-        text = f'My current MonkeyType PB: {get_pb()}\n'
-        timestamp = f'Updated on: {now}\n'
-        console_timestamp = '[%H:%M:%S]'
-        print(f'{datetime.datetime.now().strftime(console_timestamp)} Updated the file!')
-        changeLine(config['out_line'], text)
-        if (config['timestamp_line'] >= 0):
-            changeLine(config['timestamp_line'], timestamp)
-        sleep(config['api_cooldown'])
+    now = datetime.datetime.now().strftime(time)
+    text = f'My current MonkeyType PB: {get_pb()}\n'
+    timestamp = f'Updated on: {now}\n'
+    console_timestamp = '[%H:%M:%S]'
+    print(f'{datetime.datetime.now().strftime(console_timestamp)} Updated the file!')
+    changeLine(config['out_line'], text)
+    if (config['timestamp_line'] >= 0):
+        changeLine(config['timestamp_line'], timestamp)
 
 if __name__ == '__main__':
     print('-'*40 + '\nWelcome to PBFetcher by skill3472!\n' + '-'*40)
