@@ -45,4 +45,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           branch: ${{ github.ref }}
 ```
-Put this into your `.github/workflows/` directory and see it go! Remember to change the actions permissions, so it can write to the repository. You also need to have all the files present in this repo for this to work (obviously not the README.md file, you should move it somewhere else, or remove it).
+1. Put this into your `.github/workflows/` directory and remember to change the actions permissions, so it can write to the repository. 
+2. You also need to have all the files present in this repo for this to work (obviously not the README.md file, you should move it somewhere else, or remove it). 
+3. Change the `outfile` option in `config.yml` to `README.md`
+4. Watch it go!
