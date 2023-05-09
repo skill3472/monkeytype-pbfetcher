@@ -1,0 +1,25 @@
+#
+#   This is the config file for the PBFetcher Python script
+#   All the settings and what they do is explained in the comments next to them
+#   Credits: https://github.com/skill3472/
+#
+
+# The path to the text file containing your Monkeytype ApeKey. 
+# Please refer to the README.md file for instructions, on how to get one
+api_key: "api_key.txt"
+
+# This is the time format you want to have displayed under each update. Leave empty, for none.
+# Refer to the Python3 datetime documentation for all possible date params
+time: "%H:%M:%S GMT+2:00 Time"
+
+# The file you want the program to update
+out_file: "out.md"
+
+# The line in the file, that you want to be updated with the PB and
+# the line in the file, that you want to have the timestamp on.
+# Set to -1 to disable the timestamp 
+out_line: 1
+timestamp_line: 2
+
+# The cooldown between API calls. Please don't set anything below 15, as to not flood the API.
+api_cooldown: 60
